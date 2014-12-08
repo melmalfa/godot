@@ -1,49 +1,46 @@
+def ask(question)
+  $stdout.puts(question)
+  $stdout.print('>> ')
+  $stdin.gets.chomp
+end
 
 
 
+$stdout.puts("Welcome to the brand new Chatbot lending program . . . ShylockBot! \nHere are the commands you can use to talk to Shylock:\n'Purse' gives you the current amount in Shylock's purse. \n'Loan' initiates the lending process. \n'Ledger' gives you the history of Shylock's lending.  \nCool? \nOk, let's get shylockin!\n Wait . . . Did you say >> Purse? \n::ShylockBot pulls out his purse:: \n10000 ducats\nNow you know where we're starting.\n>>")
 
 
-
-
-$stdout.puts("Welcome to the brand new Chatbot lending program . . . ShylockBot! \n Here are the commands you can use to talk to Shylock:\n'Purse' gives you the current amount in Shylock's purse. \n'Ledger' gives you the history of Shylock's lending.")
+shylock_purse = 10000
 
 user_answer=$stdin.gets.chomp
 
-if user_answer == "Purse"
-  $stdout.puts("")
-elsif user_answer == "Ledger"
-  $stdout.puts("")
+# code to enter lendee_name into hash
+# elsif user_answer.includes ("loan")
+# collect answer and evaluate to find a name? or third item in an array? create variables and store into a . . . array? to be able to computer for the ledger?
+# is it possible to: unless user_answer.includes
+
+while shylock_purse > 0
+if user_answer == "Purse" || user_answer == "purse"
+  $stdout.puts("::Skylockbot pulls out his purse::\n #{current_purse_amount} ducats.")
+    ask
+  elsif user_answer == "Loan" || user_answer == "loan"
+    $stdout.puts("To whom, dear soul?")
+    lendee_name = $stdin.gets.chomp
+    $stdout.puts("How much, O wise one?")
+    amount_lent = $stdin.gets.chomp.to_i
+    shylock_purse - amount_lent
+    ask
+  elsif user_answer == "Ledger" || user_answer == "ledger"
+    $stdout.puts("::ShylockBot pulls out his ledger::\n")
+    ask
   else
-    $stdout.puts("Shylockbot looks confused.")
+    $stdout.puts("::Shylockbot looks confused.::")
+    ask
+  end
 end
-$stdout.puts(">>")
-
-shyock_purse = [1..10,000]
-
-$stdout.puts(":: " + [variable_for_replies] + "::")
 
 
+# for if user answer:  #{[name} owes me #{amount that corresponds to that name} ducats")
 
-
-# When you run your script users should be presented with a prompt, >>, so that they know that input is expected
-# all of Shylock's actions should be sandwiched between double colons ::
-# Examples below
-
-# >> user input
-# :: ShylockBots emotions ::
-# Return Value
-# ShylockBot doesn't respond to unknown commands
-
-# >> lkjlkj
-# :: ShylockBot looks confused ::
-# Act 1
-
-# ShylockBot starts off with 10,000 ducats.
-
-# >> purse
-# ::ShylockBot pulls out his purse::
-# 10000 ducats
-# Act 2
 
 # ShylockBot can lend money
 
