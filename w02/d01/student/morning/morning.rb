@@ -1,38 +1,45 @@
-# Correct the following code to print out Taylor's face.
+require 'pry'
 
-################################################################################
-# Part 1
-################################################################################
-
-# Step 1
-# Require the file taylors.rb
-
-# Require the file boneyard/exes.rb
-
-# Step 2
-# Methods
+require_relative './taylors'
+require_relative '.boneyard/exes'
 
 def sing(lyric)
-  # missing code
+  "♬"+lyric+"♬"
 end
+
+# this is not the same thng, ha?
+# def sing(lyric)
+#   "♬#{lyric}♬"
+# end
 
 def mmm_mmm(lyric)
-  # missing code
+  lyric + ", mmmm-mmmm"
 end
-
+#tested
 
 def back_up(lyric, number_of_words)
-  # missing code
+  lyric + " ("+ lyric.split.drop[number_of_words]+")"
+end
+#not done yet
+# phil wrote: backup_sings = lyric.split(' ").last(number_of_words).join(" ")
+# #{lyric}
+
+
+# mel ask how to insert () as parts of a string
+
+def repeat_lyric(lyric)
+  lyric + ", " + (lyric.split[4]+ ", ")*4 +(lyric.split[4]+".")
+end
+#tested
+
+def double_lyric(lyric)
+  lyric+", "+lyric +"."
 end
 
-# Step 3
-# Create the additional methods
 
-# repeat
-
-# double
-
-# stutter
+def stutter(lyric)
+  lyric.split[0] + ", " + lyric.split[0] + lyric
+end
 
 $stdout.puts(TAYLORS[0][:head])
 
@@ -55,14 +62,14 @@ exit unless repeat("Baby, I'm just gonna shake").include?("shake, shake, shake, 
 exit unless double("I shake it off") == "I shake it off, I shake it off"
 
 # Puts Taylor's neck
+$stdout.puts(TAYLORS[0][:neck])
 
 exit unless repeat("Baby, I'm just gonna shake").include?("shake, shake, shake, shake, shake")
 exit unless repeat("Heart-breakers gonna break").include?("break, break, break, break, break")
-
-
 exit unless repeat("And the fakers gonna fake").include?("fake, fake, fake, fake, fake")
 exit unless double("I shake it off") == "I shake it off, I shake it off"
 
 # Puts Taylor's shoulders
+$stdout.puts(TAYLORS[0][:shoulders)
 
 exit unless stutter("I shake it off, I shake it off") == ("I, I, I shake it off, I shake it off")

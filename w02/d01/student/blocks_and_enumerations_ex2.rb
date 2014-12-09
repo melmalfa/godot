@@ -9,6 +9,92 @@
 # on the inside of the block?
 #
 
+
+
+
+3.times do
+  puts "odealy"
+end
+
+# same as
+
+3.times {
+  puts "odelay"
+}
+
+# so
+
+# do end or { } are both blocks
+
+
+object.method do
+  # block is the block of code you want to do
+end
+
+fishes = ["shark", "guppie", "goldfish"]
+# array of fishes
+
+fishes.each do |fish|
+  puts fish
+end
+
+# same as
+
+fishes.each {|fish| puts fish }
+
+# |fish| is a block argument
+# it's what EACH fish will be referred to as inside the block
+
+["ford", "toyota", "hundai", "subaru"].each do |car|
+  puts "i drive a #{car}"
+end
+
+# methods are confusing
+
+# a method is a resuable piece of code
+# a block is how you can trick it out
+# or customize it
+
+
+energy = 100
+def jumping_jacks(number)
+  count = 0
+  while count < number
+    if energy >15
+      count += 1
+      eergy -= 15
+      puts "Did #{count} jumping jacks"
+    else
+      energy += 5
+      puts "Waiting, #{energy}" energy left."
+      end
+    end
+  end
+
+energy = 100
+count = 0
+
+10.times do
+  if energy <= 0
+    energy += 5
+
+    $stdout.puts("You're resting. You have done " + count.to_s + " jumping jacks and your current enery level is " + energy.to_s)
+  else
+    energy -= 15
+
+    count += 1
+    $stdout.puts("You have done " + count.to_s + " jumping jacks and your current enery level is " + energy.to_s)
+  end
+end
+
+ students.length.times { |i| puts "student #{students[i]}" }
+
+  students.each {|student| puts student}
+
+
+
+
+
 #
 # Stop and do not continue! If you are done, make the print out prettier!
 #
