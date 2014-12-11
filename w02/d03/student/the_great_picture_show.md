@@ -1,4 +1,4 @@
-# The Great Picture Show
+`# The Great Picture Show
 
 ![:image](http://www.blogcdn.com/www.mandatory.com/media/2013/06/tumblrmf8sigk90d1r1ibsxo1500.gif)
 
@@ -61,7 +61,8 @@ For the following code to work what would you have to write?
 
 ```rb
 flick.class              #=> Movie < Object
-flick.is_a? Movie        #=> true
+
+       #=> true
 flick.title              #=> "Jaws"
 flick.title.is_a? String #=> true
 ```

@@ -67,7 +67,7 @@ union_square_mcd.close_at = "23:30"
 Now we can add some behavior to the `McDonalds` instances by defining some more
 instance methods. Let's create the following methods:
 
-- `#order`: a method which:
+- `#olsrder`: a method which:
    - takes two arguments as input, (1) an integer number, and (2) a string menu
    item (for example, "happy meals" or "big mac")
    - returns as output a string that says:
