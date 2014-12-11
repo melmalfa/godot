@@ -1,4 +1,8 @@
-class Turtle
+  class Turtle
+
+  include Teenageable
+  include Mutatable
+  include Ninjable
 
   attr_accessor :name
 

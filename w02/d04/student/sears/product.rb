@@ -9,3 +9,7 @@ class Product
   end
 
 end
+
+
+# what does a product expect upon instantiation?
+# to initialize price and brands
