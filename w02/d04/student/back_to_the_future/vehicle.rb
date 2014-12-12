@@ -18,7 +18,14 @@ class Vehicle
    passengers > capacity = true
   end
 
-  def
+  def go_to(x)
+    x = location
+    if passengers == 0
+      puts("This #{description} is empty!")
+    else
+      puts("The #{description} is off to the #{x}!")
+  end
+
 
 end
 
