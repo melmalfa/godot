@@ -1,5 +1,6 @@
 ## Part 1
 
+<<<<<<< HEAD
 # Good morning! I found the format of this incredibly confusing. I'm not sure what else I was supposed to do besides troll webpages for resources/guidance, and that was incredibly frustrating, so I probably didn't get the point of this. Giving up per usual. I think it would be more helpful for me to go over some tutorial or something per your reccommendations.
 
 1. I don't remember. And trying to search for basic definitions for beginners is like looking for a needle in a haystack of complicated messes- I don't even realize the site I'm on is way over my head until I'm already in.
@@ -15,10 +16,26 @@
       logger.error "We have an error."
 
       # 9.  What is `logger`?
+=======
+```ruby
+module AppName                    # 1.  What is `AppName` and why do we use it?
+  class Server < Sinatra::Base    # 2.  What is `Server`?
+                                  # 3.  What is `Sinatra`?
+                                  # 4.  What is `Base`?
+
+    enable :logging               # 5.  What is `enable`?
+    get('/') do                   # 6.  What is `get`?
+                                  # 7.  What are the three inputs of `get`?
+
+      $stderr.puts "We have an error."       # 8.  In Sinatra where does $stderr
+                                             #     print to?
+      logger.error "We have an error."       # 9.  What is `logger`?
+>>>>>>> 85353b750d0bbf164c41ecfb1ce7850e9d4b2416
                                              # 10. What is `error`?
                                              # 11. Where does `logger` print to?
                                              # 12. How is the logger print out
                                              #     different from $stderr?
+<<<<<<< HEAD
 9. I assume it is an object that .error acts on. IDK.
 10.
 11.The terminal?
@@ -26,6 +43,8 @@
 
 
 
+=======
+>>>>>>> 85353b750d0bbf164c41ecfb1ce7850e9d4b2416
       logger.info  "Made to: #{request.url}" # 13. What is the difference btwn
                                              #     `logger.error` and
                                              #     `logger.info`?
@@ -33,6 +52,7 @@
                                              # 15. What does `request`
                                              #     represent?
                                              # 16. What is `url`?
+<<<<<<< HEAD
 14.
 15.
 16. url stands for uniform resouce locator. A web address.
@@ -41,19 +61,25 @@
 
 
 
+=======
+>>>>>>> 85353b750d0bbf164c41ecfb1ce7850e9d4b2416
 
       status 200                  # 17. What is `status`?
                                   # 18. What is `status` called on; ie, where
                                   #     are we?
                                   # 19. What does 200 represent?
+<<<<<<< HEAD
 17. An HTTP response status code.
 18.
 19. Success/Ok
+=======
+>>>>>>> 85353b750d0bbf164c41ecfb1ce7850e9d4b2416
 
       # Test the below with the two requests:
       #   - curl http://localhost:3000?key=value
       #   - curl http://localhost:3000
 
+<<<<<<< HEAD
       if request.params.length != 0
       # 20. What is `params`?
                                             # 21. What does `params` return?
@@ -70,6 +96,14 @@
 23.
 24.
 
+=======
+      if request.params.length != 0         # 20. What is `params`?
+                                            # 21. What does `params` return?
+                                            # 22. What does it represent?
+        body "The request's params were: '#{request.params}'.\n"
+                                            # 23. What is `body`?
+                                            # 24. What does it represent?
+>>>>>>> 85353b750d0bbf164c41ecfb1ce7850e9d4b2416
       else
         "Empty request params\n"            # 25. Why don't we call `body` here?
       end
