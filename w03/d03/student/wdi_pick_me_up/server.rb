@@ -8,7 +8,10 @@ module Pickup
        render(:erb, :index)
     end
 
-
+    get('/:name') do
+      @name = params[:name]
+      render(:erb, :index)
+    end
 
   end
 
