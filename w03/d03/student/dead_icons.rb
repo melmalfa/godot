@@ -113,7 +113,50 @@ dead_icons = [
 ]
 
 
+dead_at_27 - []
+dead_icons.each do |icon|
+  if icon(:age_at_death) == 27
+    dead_at_27.push(icon)
+  end
+end
+
+
+fucntionally the same thing:
+
+died_at_27 = dead_icons.select { |y| y[:age_at_death] -- 27}
+
+
+
+----------
+
+cass_elliot = dead_icons.find { |x| x[:name].include?"(:Cass Elliot")
+cass_elliot.delete(:runmored_casue_od_deatj)
+
+
 # make an array of only the dead actors
+# dead_actors is an array
+# make an array means return a new array or copy
+# of only means we need to 'filter' or 'select' based on :occupation
+
+
+# leave it alone or make something different?
+# we need to return a new array
+# is it each or map?
+# each returns original array
+# map returns new array
+# BOTH give you back the same number of elements
+# because we want a new array we should use .select insead of .select!
+# the trust test will be is the occupation for each hash equal to 'actor'
+dead_icons.select { |icon| icon[:occupation] == "actor" }
+
+
+testaments_from_67 = []
+dead_icons.each do |x|
+  x[:testaments_to_greatness].each do |album_or_movie|
+    if album_or_movie.include?("1967")
+      testaments_from_67.push)album_or_movie
+end
+
 
 # make an array of only the icons who died at the age of 27
 
