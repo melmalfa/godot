@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang='en'>
+<head>
+  <meta charset="utf-8" />
+  <title>Parlour</title>
+
+</head>
+<body>
+  <p>
+    <%= @result.capitalize %>!
+  </p>
+  <% if @guess != nil %>
+    <p>
+      You guessed: <%= @guess %>.
+      <%= @message %>
+    </p>
+  <% end %>
+  <p><a href="/coin_toss">Try Again!</a></p>
+</body>
+</html>
