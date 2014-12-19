@@ -16,6 +16,7 @@ module StarPower
     end
 
     get('/stars') do
+
     render (:erb, :stars)
     end
 
