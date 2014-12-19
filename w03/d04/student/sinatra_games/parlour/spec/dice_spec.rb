@@ -1,4 +1,5 @@
 require_relative 'simple_assert'
+require_relative '../dice'
 include SimpleAssert
 
 # A traditional die is a rounded cube, with each of its six faces showing a
@@ -55,26 +56,26 @@ assert_that(
   Fixnum
 )
 
-# Die don't have to be just 6 sides! You can also have irregular sided die like
-# a dodecahedron, from the Greek δωδεκάεδρον, from δώδεκα dōdeka "twelve" +
-# ἕδρα hédra "base", "seat" or "face")
+# # Die don't have to be just 6 sides! You can also have irregular sided die like
+# # a dodecahedron, from the Greek δωδεκάεδρον, from δώδεκα dōdeka "twelve" +
+# # ἕδρα hédra "base", "seat" or "face")
 
-three_twelve_sided_dice = [12, 12, 12]
-assert_that(
-  'Parlour::Dice#roll_and_sum returns a proper sum',
-  Parlour::Dice.new(three_twelve_sided_dice).roll_and_sum.between?(3, 36),
-  true
-)
+# three_twelve_sided_dice = [12, 12, 12]
+# assert_that(
+#   'Parlour::Dice#roll_and_sum returns a proper sum',
+#   Parlour::Dice.new(three_twelve_sided_dice).roll_and_sum.between?(3, 36),
+#   true
+# )
 
-assert_that(
-  'Parlour::Dice.roll(number_of_sides) returns a random number',
-  Parlour::Dice.roll(6).class,
-  Fixnum
-)
+# assert_that(
+#   'Parlour::Dice.roll(number_of_sides) returns a random number',
+#   Parlour::Dice.roll(6).class,
+#   Fixnum
+# )
 
-assert_that(
-  "Parlour::Dice.roll(number_of_sides) returns a random number between 1 and
-  the number_of_sides",
-  Parlour::Dice.roll(12).between?(1, 12),
-  true
-)
+# assert_that(
+#   "Parlour::Dice.roll(number_of_sides) returns a random number between 1 and
+#   the number_of_sides",
+#   Parlour::Dice.roll(12).between?(1, 12),
+#   true
+# )
