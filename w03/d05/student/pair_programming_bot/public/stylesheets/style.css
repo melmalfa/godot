@@ -1,0 +1,49 @@
+body {
+  background-color: black;
+}
+
+p {
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  margin-top: 200px;
+  margin-bottom: 10px;
+  text-align: center;
+
+}
+
+ul {
+  text-align: center;
+}
+
+a:link, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.yes {
+  background-color: green;
+  color: white;
+  margin: 0 15px;
+  padding: 11px 19px;
+  border-radius: 6px;
+
+}
+
+.no  {
+  background-color: red;
+  color: white;
+  /*margin: 0 15px;*/
+  padding: 11px 19px;
+  border-radius: 6px;
+}
+
+.blue  {
+  background-color: blue;
+  color: white;
+  padding: 11px 19px;
+  border-radius: 6px;
+}
