@@ -37,3 +37,32 @@ img {
 /*==================================*/
 /* Write Your Styles below!!! */
 /*==================================*/
+
+.gutter {
+  position: relative;
+}
+
+.wishbone   {
+  position: absolute;
+  top: -18px;
+  left: 223px;
+}
+
+.breadbasket  {
+  position: absolute;
+  top: 230px;
+  left: 243px;
+}
+
+/*tposition: absolute;
+  top: 240px;
+  left: 200px;
+  this breadbasket code alone makes it in place . . . . when i had not messed with wishbone or any other body part yet!*/
+
+.heart  {
+
+}
+
+.butterflies  {
+
+}
