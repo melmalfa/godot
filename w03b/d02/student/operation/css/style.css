@@ -44,13 +44,13 @@ img {
 
 .wishbone   {
   position: absolute;
-  top: -18px;
+  top: 32px;
   left: 223px;
 }
 
 .breadbasket  {
   position: absolute;
-  top: 230px;
+  top: 280px;
   left: 243px;
 }
 
@@ -60,9 +60,15 @@ img {
   this breadbasket code alone makes it in place . . . . when i had not messed with wishbone or any other body part yet!*/
 
 .heart  {
-
+  position: absolute;
+  top: 62px;
+  right: 180px;
 }
 
-.butterflies  {
+/*leaving out absolute doesn't do anything*/
 
+.butterflies  {
+  position: absolute;
+  top: 172px;
+  right: 200px;
 }

@@ -1,0 +1,17 @@
+body  {
+  background: #222;
+}
+
+.photo  {
+  border: 5px solid white;
+  height: 200px;
+  width: 200px;
+  margin: 50px auto;
+
+/*overly complex but cool shadow*/
+  -webkit-box-shadow: 0px 10px 7px rgba(0,0,0,0.4), 0px 20px 10px rgba(0,0,0,0.2);
+     -moz-box-shadow: 0px 10px 7px rgba(0,0,0,0.4), 0px 20px 10px rgba(0,0,0,0.2);
+          box-shadow: 0px 10px 7px rgba(0,0,0,0.4), 0px 20px 10px rgba(0,0,0,0.2);
+}
+</pre>
+</div>
