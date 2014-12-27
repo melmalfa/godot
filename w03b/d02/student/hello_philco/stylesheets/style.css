@@ -16,3 +16,42 @@ html {
 /* ======================================= */
 /*    Students: Write Your Styles Below!   */
 /* ======================================= */
+
+ul  {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+}
+
+li  {
+  position: absolute;
+  display: inline;
+}
+
+body  {
+  position: relative;
+}
+
+.words  {
+  font-size: 100px;
+  font-weight: bold;
+  position: absolute;
+  top: 80px;
+  right: 200px;
+}
+
+img  {
+  position: absolute;
+  top: 100px;
+  left: 100px;
+
+}
+
+.hello {
+  color: rgb(16, 118, 221);
+}
+
+.philco {
+  color: rgb(249, 68, 30);
+}
