@@ -10,5 +10,47 @@ html, body {
   color: #323232;
 }
 
+.header {
+  height: 70px;
+  background-color: #323232;
+  margin-top: 0px;
+}
+
+.footer {
+  height: 100px;
+  background-color: #323232;
+}
+
+.words  {
+  font-size: 32px;
+}
+
+ul  {
+  list-style-type: none;
+  margin: 0px;
+  padding-top: 27px;
+  font-size: 19px;
+
+}
+
+.bottom {
+  text-align: center;
+
+}
+
+.top {
+
+}
+
+img {
+/*  border-bottom: 0px*/
+  padding-bottom: 0px
+}
+
+li  {
+  color: #DBDBDB;
+  display: inline;
+}
+
 /* background color in header & footer: #323232 */
 /* text color code for the header/footer: #DBDBDB       */
