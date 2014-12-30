@@ -30,6 +30,8 @@ ul  {
   margin: 0px;
   padding-top: 27px;
   font-size: 19px;
+  color: #DBDBDB;
+
 
 }
 
@@ -50,6 +52,7 @@ img {
 li  {
   color: #DBDBDB;
   display: inline;
+  padding: 8px;
 }
 
 /* background color in header & footer: #323232 */
