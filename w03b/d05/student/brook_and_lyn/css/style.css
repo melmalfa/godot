@@ -15,22 +15,25 @@ div {
 .words  {
   font-family: "Times New Roman", serif;
   color: #656565;
-  width: 80%;
+
 }
 
 .paragraph  {
   font-size: 12px;
   line-height: 17px;
+/*  width: 80%;*/
+  margin-right: 50px;
 
 
 }
 
 .blue {
-
+  color: blue;
 }
+
 ul  {
   position: absolute;
-    margin-left: -40px;
+  margin-left: -40px;
 }
 
 li {
