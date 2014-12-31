@@ -1,6 +1,22 @@
-/* 
+.container  {
 
-## Style Hints: 
+}
+
+div {
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.paragraph  {
+  font-size: 12px;
+  font-family: "Times New Roman", serif;
+  color = #656565
+}
+
+/*
+
+## Style Hints:
 
 Body Font Size = 12px
 	 Line Height = 17px
