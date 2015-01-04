@@ -6,6 +6,7 @@
 body {
   border: 8px solid rgb(255, 250, 185);
   min-height: 100%; /* ensures that body element will expand to the size of the window */
+  font-family: 'Recta-Regular';
 }
 
 /* ensures that any divs set to display: inline-block will align along the top of their respective containers */
@@ -58,25 +59,23 @@ li  {
 
 .below_header {
   width: 100%;
-  position: absolute;
-
 }
 
 .two_thirds_product_wrapper {
   width: 65%;
-
 }
 
 .one_third_product_wrapper_right  {
   width: 32%;
-
+  position: absolute;
+  right: 250px;
+  padding-left: 10px;
 
 }
 
 /*Below the header is a container (outlined in purple in the layout breakdown) that's 100% of the width of the centered container, and has two inner columns. The width of the column on the left is around 65%, and it contains two <img> tags. The width of the column on the right is around 32% and contains three image tags. Get these elements laid out as they appear on the Lars Tornoe webpage
 
 Note: don't worry about the text overlaid on the images just yet. That's the bonus.*/
-
 
 
 
