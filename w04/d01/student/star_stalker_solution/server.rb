@@ -7,6 +7,7 @@ module StarStalker
     get("/") do
       render(:erb, :index, { :layout => :default_layout })
     end
+    # if a get request is made to the root, run the code
 
     get("/about") do
       render(:erb, :about, { :layout => :default_layout})
