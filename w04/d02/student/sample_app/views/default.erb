@@ -6,5 +6,12 @@
 </head>
 <body>
   <%= yield %>
+  <footer>
+    <p>Recently Veiwed Departments
+      <% @pages_viewed.each do |page| %>
+      <%= page %>
+      <% end %>
+
+    </p></footer>
 </body>
 </html>

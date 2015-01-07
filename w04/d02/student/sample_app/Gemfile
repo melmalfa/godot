@@ -5,4 +5,8 @@ gem 'sinatra'
 gem 'sinatra-contrib'
 
 # TODO add Redis
+gem 'redis'
 # TODO add pry to the development group
+group :development do
+  gem 'pry'
+end
