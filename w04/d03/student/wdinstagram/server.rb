@@ -1,3 +1,5 @@
+require 'pry'
+
 module Wdinstagram
   class Server < Sinatra::Base
 
@@ -23,7 +25,7 @@ module Wdinstagram
 
     get('/entries') do
       entry_ids = $redis.lrange("entries", 0, -1)
-      @entries = entry_ids.map { |id| $redis.hgetall(":#{id}")}
+      @entries = entry_ids.map { |id| $redis.hgetall("entry:#{id}")}
       render(:erb, :entries, :layout => :default)
     end
 
@@ -34,11 +36,17 @@ module Wdinstagram
       date = params["date_taken"]
       $redis.hmset("entry:#{id}", "author", author, "photo_url", url, "date_taken", date)
       $redis.lpush("entries", id)
-      redirect to("/entries")
+      redirect to ("/")
+      # redirect to("/entries/:id")
     end
 
     get('/entries/new') do
       render(:erb, :new, :layout => :default)
+    end
+
+    get('/entries/:id)')  do
+
+      render(:erb, :show, :layout => :default)
     end
 
   end

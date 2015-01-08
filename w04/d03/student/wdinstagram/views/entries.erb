@@ -1,7 +1,11 @@
-<h1>All The Entries</h1>
+<h1>All Entries</h1>
 
 <ul>
   <% @entries.each do |entry| %>
-    <li><%= entry %></li>
+    <li>Author: <%= entry["author"] %>
+      Taken on: <%= entry["date_taken"] %>
+    <img src="<%= entry["photo_url"] %>" alt="">
+  </li>
   <% end %>
+
 </ul>
