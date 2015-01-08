@@ -1,4 +1,64 @@
 <h1>
   <span class="blue">G</span><span class="red">o</span><span class="goldenrod">g</span><span class="blue">g</span><span class="green">l</span><span class="red">e</span>
 </h1>
+<!-- method really means 'what HTTP request type to use?'' -->
+<!-- action really means 'to what path does this form fire a request to'? -->
+<!-- the actual form tag itself is a wrapper -->
 
+<form method=" " action=" ">
+  <label>Search:
+    <input type="text" name="search_term" placeholder="let me be your carmen sandiego" required>
+  </label>
+
+  <label>Safe Search?
+    <input type="checkbox" name="safe_search">
+  </label>
+
+  <label> Results per page:
+    <select name="results_per_page">
+      <option value="25">25</option>
+      <option value="50">50</option>
+      <option value="100">100</option>
+    </select>
+  </label>
+
+  <!-- the following does not need label cuz user won't see it -->
+  <input type="hidden" value="travis.vanderhoop@gmail.com" name="user_email">
+
+    <label>
+    <input type="submit" value="search!">
+  </label>
+
+  <p>
+    <label>
+    <input type="file" name="who_knows">
+    </label>
+</p>
+
+    <label>Date
+      <input type="date" name="date">
+    </label>
+
+    <label>Word Doc:
+      <input type="file" name="word_doc">
+    </label>
+
+
+
+<p>
+    <label>Text Area
+    <textarea name="textarea" rows="10" cols="50">Enter some text here if you dare . . . </textarea>
+    </label>
+</p>
+
+    <label>Submit Password:
+    <input type="password" name="password">
+    </label>
+
+
+
+
+
+</form>
+
+<!-- text between option tags are just for display but it is determined by the value -->

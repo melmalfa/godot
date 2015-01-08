@@ -1,0 +1,46 @@
+body  {
+  font: Helevtica, Arial, sans-serif;
+  background: #fff url("../images/bgtile.png") repeat-x;
+}
+
+
+.page  {
+/*  border: 1px solid red;*/
+  width: 900px;
+  margin: 100px auto 0;
+}
+/*give a border so can see it:  border: 1px solid red;*/
+/*after putting in borders, set width so could see it and then put in margin 0 auto for .page so can see it centered. then changed
+good to have a percentage, and a max width and a min width. 900px is a common width*/
+
+.content  {
+  border: 1px solid black;
+  width: 400px;
+  display: inline-block;
+  float: right;
+
+}
+/*had to reduce width to make inlin-block work*/
+/*floats with inline elemtnts put thing floated */
+
+/*also could be div.content*/
+/*give it a border so can see what we are working with:border: 1px solid black*/
+
+div.main {
+  border: 1px solid purple;
+}
+
+ul.footer {
+/*  border: 1px solid green;*/
+  text-align: center
+}
+/*muted border after it was centered*/
+
+ul.footer li  {
+  display: inline;
+  list-style-type: none;
+  text-decoration: none;
+  color: black;
+
+}
+/*inline-block means treat it as a block on the inside- and be inline on the outside. when jsut text, just use inline*/
