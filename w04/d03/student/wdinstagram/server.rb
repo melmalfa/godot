@@ -1,4 +1,4 @@
-require 'pry'
+
 
 module Wdinstagram
   class Server < Sinatra::Base
