@@ -195,7 +195,7 @@ for (var i = 0; i < kings.length; i++) {
   if (kings[i].pretender === true);
   truePretenders.push(kings[i]);
   }
-// # having a lot of drouble but
+// it's not working but i'm close!
 
 
 /////////////////////////////////////////////////////
@@ -205,11 +205,27 @@ for (var i = 0; i < kings.length; i++) {
   // 1. Define a function 'calculateArea' that takes two arguments, 'height' and 'width' and returns the area as an integer.
     // Example usage: calculateArea(3, 4) // =>  12
 
+    function calculateArea(height, width) {
+      return (height*width)
+    }
+//       return toInt(height*width)
+      // return (height*width).toInt
+
+
   // 2. Define a function 'calculateTip' that takes two arguments, 'mealCost' and 'tip_percentage' and returns the appropriate tip amount as a float
     // Example usage: calculateTip(20.00, 15) // =>  3.0
 
+    function calculateTip(mealCost, tip_percentage) {
+        return (mealCost)(tip_percentage*.01)
+    }
+// this is wrong- need to switch to float- returns an error message
+
   // 3. Define a function 'buildFullName' that takes two arguments, 'firstName' and 'lastName', and returns the full name properly formatted
     // Example usage: buildFullName("Travis", "Vander Hoop") // => "Travis Vander Hoop"
+
+    function buildFullName(firstName, lastName) {
+      return (firstName + " " + lastName)
+    }
 
 /////////////////////////////////////////////////////
 // Part 8: User Validation Functions
