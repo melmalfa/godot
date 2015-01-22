@@ -133,27 +133,49 @@ var talkingHeadsAlbums = [
 
 // 1. print "Talking Heads were a prolific band" to the console IF AND ONLY IF Talking Heads have 6 albums or more. Otherwise, print "Talking heads didn't have much output." Use the array of albums above.
 
+if (talkingHeadsAlbums.length >= 6) {
+console.log("Talking Heads were a prolific band");
+} else {
+  console.log("Talking Heads didn't have much output");
+}
+
 /////////////////////////////////////////////////////
 // Part 4: More Tasks About Datatypes and Structures
 /////////////////////////////////////////////////////
 
 // 1. Create an object literal called `band`.
+band = {}
 
 // 2. Give it the property `name` and set it to "Talking Heads"
+band.name = "Talking Heads"
 
 // 3. Give it the property `members` and set it to an array with a single string, "David Byrne", in it.
+band.members = ["David Byrne"]
 
 // 4. Give it the property `albums` and set it to the array stored in the variable talkingHeadsAlbums
+band.albums = [talkingHeadsAlbums]
 
 // 5. Add "Tiny Weymouth", "Chris Franz" and "Jerry Harrison" to the members array.
+band.members.push("Tiny Weymouth", "Chris Franz", "Jerry Harrison");
+
 
 /////////////////////////////////////////////////////
 // Part 5: For Loops
 /////////////////////////////////////////////////////
 
 // 1. Use a for loop to print out the name of each Talking Heads album
+for (var i = 0; i < talkingHeadsAlbums.length; i++) {
+  console.log(talkingHeadsAlbums[i].title);
+}
+
 
 // 2. Create a variable called 'sireTally', and set it to the integer value 0. Then use a for-loop to go through all the Talking Heads albums, incrementing sireTally if the album was released under the "Sire" label
+var sireTally = 0
+for (var sireTally = 0; sireTally < talkingHeadsAlbums.length; sireTally++) {
+  if (talkingHeadsAlbums[sireTally].albumDetails.label === "Sire");
+  sireTally++;
+}
+
 
 /////////////////////////////////////////////////////
 // Part 6: More Tasks With Arrays and For Loops
@@ -168,6 +190,13 @@ var kings = [
 ];
 
 // 1. Create a variable called truePretenders and assign it to an empty array. Then use a for loop to iterate through the 'kings' array, pushing any established pretenders into the waiting truePretenders array.
+var truePretenders = []
+for (var i = 0; i < kings.length; i++) {
+  if (kings[i].pretender === true);
+  truePretenders.push(kings[i]);
+  }
+// # having a lot of drouble but
+
 
 /////////////////////////////////////////////////////
 // Part 7: Basic Functions
