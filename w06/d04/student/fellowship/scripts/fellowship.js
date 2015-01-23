@@ -49,6 +49,7 @@ mordor.appendChild(mordorH1)
 }
 
 //this took me sooooo long. to lay out the logic of the steps, then trial and error- what website can you point me too that specifically helps in creating and appending lots of info at a time on Javascript? I found tons of info about changing or adding to existing page content, but not to just plain old creating new shit. I found it difficult to find relevant info for this problem :(
+  //ps- wow i complain a lot!!!! maybe i was just tired . . . :)
 
 makeMiddleEarth();
 
