@@ -114,8 +114,6 @@ $jewelry = {
 
 $items.merge!($jewelry)
 
-
-
 def item_names
   item_names_array = []
   $items.each do |key,item_hash|

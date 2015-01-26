@@ -23,3 +23,12 @@ kanye_records = [
 
 
 # 3. create an empty array called "years", and push only the years that Kanye came out with an album into it
+
+pre_autotune_records = []
+
+kanye_records.each do |album|
+  if album[:year] < 2010
+    pre_autotune_records << album[:year]
+  end
+
+end

@@ -1,5 +1,5 @@
 module CatTinder
-  class DatabaseHelper < Sinatra::Base
+  module DatabaseHelper
 
 require 'redis'
 require 'seed.rb'
@@ -7,7 +7,16 @@ require 'seed.rb'
 $redis = Redis.new
 
   def ids
+    $redis.hgetall ("cat_ids")
+  end
 
+  def image_url_for(id)
+  end
+
+  def votes_for(id)
+  end
+
+  def upvote!(id)
   end
 
 

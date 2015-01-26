@@ -26,3 +26,29 @@ div {
   vertical-align: top;
 }
 
+.container  {
+  width: 100%;
+  margin-left: 0;
+  margin-right:0;
+}
+
+header div {
+  display: inline-block;
+}
+
+header  {
+  background-color: #333333;
+}
+
+li  {
+  list-style-type: none;
+  display: inline-block;
+  margin: 2px 2px 2px 2px;
+  text-align: right;
+  color: white;
+  font-family: lato;
+}
+
+.main_photo {
+  background-image: url("images/dapper_steve.jpg");
+}

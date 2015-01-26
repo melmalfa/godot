@@ -14,6 +14,16 @@ module AppName
       $redis = Redis.new # defaults to 127.0.0.1:6379
     end
 
+    configure :development do
+      register Sinatra::Reloader
+      $redis = Redis.new # Defaults to 127.0.0.1:6379
+    end
+
+# This runs on Heroku
+    configure :production do
+      $redis = Redis.new({url: ENV['REDISTOGO_URL']})
+    end
+
     ########################
     # Routes
     ########################

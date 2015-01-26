@@ -1,5 +1,8 @@
+require_relative 'database_helper'
+
 module CatTinder
   class Server < Sinatra::Base
+    helper CatTinder::Databasehelper
 
     ########################
     # Configuration

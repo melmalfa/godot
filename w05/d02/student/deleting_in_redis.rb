@@ -12,3 +12,6 @@ $redis.rpush("colors", "purple")
 $redis.rpush("colors", "dave")
 
 binding.pry
+
+# overwriting a value in a hash
+# just reassign it

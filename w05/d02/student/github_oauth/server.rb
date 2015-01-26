@@ -19,17 +19,22 @@ module GithubOauth
     end
 
     get("/oauth_callback") do
+
       response = HTTParty.post(
         "https://github.com/login/oauth/access_token",
+        # url we are posting to
         :body => {
           :code          => params[:code],
           :client_id     => ENV["GITHUB_OAUTH_ID"],
           :client_secret => ENV["GITHUB_OAUTH_SECRET"],
+          # items we are passing through -these 3 are required
         },
         :headers => {
           "Accept" => "application/json"
+          # this is optional, but it tells that we want the return to come in as json
         }
       )
+
       session[:access_token] = response["access_token"]
       get_user_info
       redirect to('/')

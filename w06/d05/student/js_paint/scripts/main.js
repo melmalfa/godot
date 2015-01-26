@@ -29,8 +29,7 @@ for (var i = 0; i < 805; i++) {
   }
 }
 
-
-reSet.addEventListener()
+// reSet.addEventListener("click", (lots.set Attribute("class", tile));
 //i don't think this worked
 // var mouseDown = function(event) {
 //   event.target(mouseDepressed = "true")
