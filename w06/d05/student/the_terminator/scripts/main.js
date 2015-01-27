@@ -26,10 +26,14 @@ OneTrueSarahConnor.className = "badass"
 
 var poorSouls = document.querySelectorAll(".collateral-damage")
 
+// Iterate through poorSouls, removing the elements from the DOM one by one.
 for(var i = 0; i < poorSouls.length; i++) {
   poorSouls[i].parentNode.removeChild(poorSouls[i]);
 }
 
-
-// Iterate through poorSouls, removing the elements from the DOM one by one.
 // Remove the terminator from the DOM.
+terminator.parentNode.removeChild(terminator);
+
+
+
+

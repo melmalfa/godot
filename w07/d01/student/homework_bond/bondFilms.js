@@ -52,4 +52,4 @@ var numbers = _.map(grosses, function(number) {return grossToNumber(number); });
 
 var sum = _.reduce(numbers, function(sum, n) { return sum + n; });
 
-Hey - I spent HOURS- last night on number 1 and 2. I did learn some useful things like . . . the difference between lodash and underscore and that I have excellent research skills, but otherwise this was a complete exercise in hopeless confusion and frustration. Amanda was COMPLETELY USELESS, and I wrote to Sarah to complain because I find her behavior unprofessional and unacceptable. I don't know what else to say.
+
