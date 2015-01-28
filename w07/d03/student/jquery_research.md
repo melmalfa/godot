@@ -4,11 +4,12 @@ Today we learn jQuery, the world's most popular JavaScript library. Take 15 minu
 
 #### Questions
 
-1. What is jQuery? 
-    - Articulation: 
+1. What is jQuery?
+    - Articulation: a fast, small, feature-rich, cross-platform JavaScript library. The most popular JS library in use today. Free, open-source software. Designed to simplify the client-side scripting of HTML. Makes it easier to manipulate the DOM.
 1. What problem does jQuery solve?
-    - Articulation: 
+    - Articulation: Helps with cross-browser  compatability.
 1. How does it solve it?
-    - Articulation: 
+    - Articulation: It fires off
 1. What are the alternatives?
-    - Articulation:
+    - Articulation: Minified.js, , Prototype, Zepto,
+

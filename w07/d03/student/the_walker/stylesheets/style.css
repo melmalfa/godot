@@ -2,8 +2,7 @@ img {
   /* Ensures Walker Walks Along the Broder */
   position: absolute;
   bottom: -1em;
-
-  width:  20em;
+  width: 20em;
   height: 20em;
   cursor: pointer;
 }
