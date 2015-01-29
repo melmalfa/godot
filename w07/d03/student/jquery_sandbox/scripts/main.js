@@ -65,7 +65,7 @@ $("<div></div>").addClass("product-container");
 // var $container = $("<div class=\"product-container|>");
 //  the < and > here mean create (carrots)
 
-for(var u = 0; i < 8; i++) {
+for(var i = 0; i < 8; i++) {
   var newJar = $("<div class=\"jar\">");
   //  the < and > here mean create (carrots)
   $container.append(newJar);
