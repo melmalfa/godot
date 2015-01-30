@@ -32,15 +32,23 @@
           displayChatMessage(message.name, message.text);
         });
 
-        fireStream.on('child_removed',function(){console.log('child_removed fired!');});
+        fireStream.on('child_removed',function(){console.log('child_removed fired!');fireStream.remove(displayChatMessage)});
         fireStream.on('child_changed',function(){console.log('child_changed fired!');});
-        fireStream.on('value',function(){console.log('value fired!');});
+        fireStream.on('value',function(){console.log('value fired!');createDeleteButton();});
         $('#messagesDiv').html('');
       }
 
       var displayChatMessage = function(name, text) {
         $('<div>').text(text).prepend($('<em>').text(name+': ')).appendTo($('#messagesDiv'));
         $('#messagesDiv')[0].scrollTop = $('#messagesDiv')[0].scrollHeight;
+      };
+
+      var createDeleteButton = function() {
+        $('<input>').attr({
+          type: 'button',
+          name: 'delButton',
+          value: 'Delete Message'
+        }).appendTo($('#messagesDiv'));
       };
 
       $('#firebaseIDInput').keypress(function (e) {
