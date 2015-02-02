@@ -2,9 +2,46 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
+    <script src='https://cdn.firebase.com/js/client/2.0.4/firebase.js'></script>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
     <title>Firebase Tutorial</title>
   </head>
   <body>
     <h1>Firebase Tutorial</h1>
+    <label>Firebase Demo ID</label>
+    <input type='text' id='fireBase' placeholder='Firebase Demo ID'>
+    <div id='messagesDiv'></div>
+    <input type='text' id='nameInput' placeholder='Name'>
+    <input type='text' id='messageInput' placeholder='Message'>
+    <script>
+      var myDataRef = new Firebase('https://z2391kubzm6.firebaseio-demo.com/');
+
+      $("#fireBase").keypress(function (e) {
+        if (e.keycode == 13) {
+        var fireBase = $("#fireBase").val();
+        var url = 'https://'  + fireBase + '.firebaseio-demo.com/';
+          console.log(url);
+          myDataRef = new Firebase(url);
+        }
+      });
+
+      $('#messageInput').keypress(function (e) {
+        if (e.keyCode == 13) {
+          var name = $('#nameInput').val();
+          var text = $('#messageInput').val();
+          myDataRef.push({name: name, text: text});
+          $('#messageInput').val('');
+        }
+      });
+      myDataRef.on('child_added', function(snapshot) {
+        console.log("child added called!")
+        var message = snapshot.val();
+        displayChatMessage(message.name, message.text);
+      });
+      function displayChatMessage(name, text) {
+        $('<div/>').text(text).prepend($('<em/>').text(name+': ')).appendTo($('#messagesDiv'));
+        $('#messagesDiv')[0].scrollTop = $('#messagesDiv')[0].scrollHeight;
+      };
+    </script>
   </body>
 </html>

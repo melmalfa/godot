@@ -8,8 +8,8 @@ While you may be familiar with the famous *"Hello World!"* program that is used
 to model the simplest introduction to a language, now we're going to step in
 to the world of the **[Todo Application][todo-app-list]**.
 
-Todo apps have become the canonical first application to write when building 
-client-side applications. For a list of examples, you can visit 
+Todo apps have become the canonical first application to write when building
+client-side applications. For a list of examples, you can visit
 [TodoMVC][todo-mvc]!
 
 #### Completion
@@ -40,7 +40,17 @@ should look something like this:
 We can create tasks, decide that they are complete, and finally remove them.
 
 > If this is a general idea of how we want our application to look, what data
-> can we infer we will need? What structure should hold our data?
+can we infer we will need? since we are only conccerned with one piece of data per use,
+What structure should hold our data?array- ordered list
+
+create javascript Object? like a hash?
+Data: Task
+
+type in data
+create data
+show data in list
+complete tasks
+remove tasks
 
 - [ ] 1. Create an object to hold our application's data.
 - [ ] 2. Enter into the object the data represented in the image above.
@@ -60,6 +70,8 @@ The actions we need to implement in our model are:
 - [ ] 1. Create a new task (`createTask`). Make sure to give the new task a
          unique ID! Also, have the function return that new unique ID. (Remember
          how we did this with Redis?)
+
+ var
 - [ ] 2. Mark a task as complete or as incomplete (`toggleComplete`), given the
          task's unique ID.
 - [ ] 3. Remove a task (`removeTask`).
@@ -67,7 +79,7 @@ The actions we need to implement in our model are:
 
 ## Part 3: Firebase as a Model
 
-*Remember: a big help for this part will be the 
+*Remember: a big help for this part will be the
 [Firebase Quickstart Guide][firebase-guide] and the
 [Firebase API Docs][firebase-api].*
 
@@ -75,9 +87,9 @@ Let's replace our local model (a JavaScript object) with a reference to a
 persistent store on Firebase! Keep the Firebase open in the browser while
 testing the console functions to see that they work.
 
-- [ ] 1. Create a Firebase with the name TodoApp (and pick a url that is 
+- [ ] 1. Create a Firebase with the name TodoApp (and pick a url that is
          available) on the [Firebase website][firebase-website].
-- [ ] 2. Rewrite `createTask` so that it creates a task on Firebase, using 
+- [ ] 2. Rewrite `createTask` so that it creates a task on Firebase, using
          `Firebase#push`. Make sure that you return the unique ID!
 - [ ] 3. Rewrite `toggleComplete` to work with Firebase using `Firebase#child`
          to get the child reference, and `Firebase#set` to change its value.
@@ -93,7 +105,7 @@ here is **[a working version of the app][example]**.
 First, we create utility functions:
 
 - [ ] 1. Write a function to create a new HTML "task" element! Use the HTML
-         provided below as an example (`createTaskEl`). This function should 
+         provided below as an example (`createTaskEl`). This function should
          take a description and completion status (`true`/`false`) as arguments,
          and return a new task `<div>`. Warning: set the checkbox status with
          the `jQuery#prop` method. It's a [tricky thing][jquery-prop]!
@@ -120,7 +132,7 @@ The solution is to add extra *metadata* to our task element (`<div>`) with the
 task's unique ID. Therefore we can reference a task directly from it's element.
 
 - [ ] 3. Rewrite `createTaskEl` (and `addTaskEl`) to take a unique ID as well.
-         Add the unique ID to the element as a "[data attribute][data-attr]". 
+         Add the unique ID to the element as a "[data attribute][data-attr]".
          You can do this very simply with
          [jQuery's `jQuery#attr` method][jquery-attr]
          (`.attr("data-...", "value")`)! __**__
@@ -163,7 +175,7 @@ Next, we need to make the DOM interactive! This means *event-driven UI*.
 
 Awesome! Phew. Still with us? :)
 
-- [ ] 3. Add event functions remove (`killTask`) and complete (`completeTask`), 
+- [ ] 3. Add event functions remove (`killTask`) and complete (`completeTask`),
          and attach them to the event listeners from 1.iii above. Each of these
          will grab the task ID of the element where the event is fired, and
          use that to call the model and DOM functions created above.
@@ -175,11 +187,11 @@ Awesome! Phew. Still with us? :)
 
 ## Part 6: Listen to Firebase and Update the DOM
 
-- [ ] 1. Add a listener for `child_added` events to your Firebase with 
-         `Firebase#on`. The listener should be sure to add the element to the 
+- [ ] 1. Add a listener for `child_added` events to your Firebase with
+         `Firebase#on`. The listener should be sure to add the element to the
          page (`newTask`).
 - [ ] 2. Remove the call to `newTask` from the "new-task" form submission event
-         listener. As long as we update the model (Firebase) itself, the 
+         listener. As long as we update the model (Firebase) itself, the
          Firebase listener will trigger.
 
 ## Part 7: Listen for Updates and Removals
@@ -187,15 +199,15 @@ Awesome! Phew. Still with us? :)
 For this part, open a second browser window to your page. Make sure that when
 you change one, the other synchronizes!
 
-- [ ] 1. Create stubs for the necessary event callbacks for update and remove 
-         (`child_changed`, `child_removed`) that just log to the console to be 
+- [ ] 1. Create stubs for the necessary event callbacks for update and remove
+         (`child_changed`, `child_removed`) that just log to the console to be
          sure they are even firing!
-- [ ] 2. Rewrite `killTask` and `completeTask` so that the creation of the DOM 
+- [ ] 2. Rewrite `killTask` and `completeTask` so that the creation of the DOM
          elements takes place in above event listeners instead.
-- [ ] 3. To make the checkboxes synch up properly, rewrite the 
+- [ ] 3. To make the checkboxes synch up properly, rewrite the
          `toggleTaskElComplete` function to take an optional complete status
          argument. In the function, if that argument is not undefined, use it to
-         set the checkbox status with `jQuery#prop`! Make sure that the 
+         set the checkbox status with `jQuery#prop`! Make sure that the
          `child_changed` event passes it a complete status.
 
 ## Part 8

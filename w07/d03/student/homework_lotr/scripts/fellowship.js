@@ -20,6 +20,7 @@ var $lands = lands;
 var makeMiddleEarth = function() {
   var $section = $("<section id=\"middle-earth\">");
   for ( var i = 0, len = lands.length; i < len; i++) {
+    debugger
     var $land = $("<article>");
     $land.addClass("land");
     var $h1 = $("<h1>");
