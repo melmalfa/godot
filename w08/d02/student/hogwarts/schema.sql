@@ -1,16 +1,11 @@
 DROP TABLE IF EXISTS houses;
 DROP TABLE IF EXISTS students;
+DROP TABLE IF EXISTS death_eater_memberships;
 
 CREATE TABLE houses (
   id SERIAL PRIMARY KEY,
   name varchar(50) UNIQUE
 );
-
--- INSERT INTO houses
---   (name)
--- VALUES
---   ('Gryffindor'), ('Hufflepuff'), ('Ravenclaw'), ('Slytherin');
-
 
 CREATE TABLE students (
   id SERIAL PRIMARY KEY,
@@ -19,18 +14,22 @@ CREATE TABLE students (
   house_id INTEGER REFERENCES houses(id)
 );
 
--- ALTER TABLE students
--- RENAME COLUMN house_id TO house_name
--- ALTER TABLE students
--- ALTER COLUMN house_id TYPE integer;
+CREATE TABLE death_eater_memberships (
+  id SERIAL PRIMARY KEY,
+  joined_on TIMESTAMP NOT NULL,
+  student_id INTEGER REFERENCES students(id)
+);
 
--- INSERT INTO students (fname, lname, house_id)
--- VALUES
---   ('Fred', 'Weasly', 1),
---   ('George', 'Weasly', 1),
---   ('Harry', 'Potter', 1)
--- ;
+-- SELECT students.*, houses.*
+-- FROM students
+-- INNER JOIN houses
+-- ON students.house_id = houses.id;
 
--- DELETE FROM students WHERE id = 1;
+-- SELECT students.*, death_eater_memberships.*
+-- FROM death_eater_memberships
+-- INNER JOIN students
+-- ON death_eater_memberships.student_id = students.id
+-- WHERE house_id != 4;
+
 
 
