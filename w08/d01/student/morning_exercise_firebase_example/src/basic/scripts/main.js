@@ -1,10 +1,11 @@
 // define application namespace (object) to keep global namespace clean
 var todoApp = {};
 
-// define model action and view action namespaces (properties as objects)
+// define model action and view action namespaces (properties as objects). As long as names named as being inside the todoApp, they are available everywhere, but won't conflict name-wise
 todoApp.model         = {};
+// view is just an empty object. this is for the purpose of namespacing only. This is a common way to structure logic.
 todoApp.view          = {};
-todoApp.view.handlers = {}; // these "handlers" are view event handlers that 
+todoApp.view.handlers = {}; // these "handlers" are view event handlers that
                             // call model functions
 
 // once the page is loaded...
@@ -20,7 +21,7 @@ window.addEventListener("load", function() {
     event.preventDefault();
 
     var description = todoApp.view.$newTaskDesc.val();
-    
+
     todoApp.view.$newTaskDesc.val("");
 
     todoApp.model.addNewTask(description);
@@ -83,7 +84,7 @@ todoApp.view.createTask = function(taskId, description, complete) {
            .append($('<input type="checkbox">'))
            .append($('<span class="task-description">'+description+'</span>'))
            .append($('<span class="remove">X</span>'));
-  
+
   if (complete) {
     el.addClass("complete");
     el.find('input[type="checkbox"]').prop("checked", true);
@@ -96,7 +97,7 @@ todoApp.view.createTask = function(taskId, description, complete) {
 }
 todoApp.view.addNewTask = function(taskId, description, complete) {
   var $task = todoApp.view.createTask(taskId, description, complete);
-  
+
   todoApp.view.$taskList.append($task);
   return $task;
 }
