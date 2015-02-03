@@ -5,10 +5,18 @@
   <title>Animations</title>
 
   <link rel='stylesheet' type='text/css' href='stylesheets/normalize.css'>
+  <link rel='stylesheet' type='text/css' href='stylesheets/main.css'>
+  <link rel='stylesheet' type='text/css' href='stylesheets/animate.css'>
   <style>
+  /*figure out why this doesn't work*/
+/*    h1 {
+  -webkit-animation-duration: 3s;
+  -webkit-animation-delay: 2s;
+  -webkit-animation-iteration-count: infinite;
+}*/
     /* Your style here. */
   </style>
-  
+
   <script type="text/javascript" src="scripts/jquery.js"></script>
 </head>
 <body>
@@ -28,6 +36,32 @@
     </div>
   </div>
   <script>
+//   var load = function () {
+//   $("h1").addClass('animated fadeIn');
+//   $("li").addClass('animated bounceInLeft');
+// }
+//   window.onload = load;
+//   window.addEventListener("load", function(e) {  });
+
+  // setTimeout (function() {$("h1").addClass('animated fadeIn')}, 5000);
+  // setTimeout (function() {$("li").addClass('animated bounceInLeft')}, 8000);
+
+  $("li").addClass('hide animated bounceInLeft');
+  $("h1").addClass('animated fadeIn hide');
+  $("h1").removeClass('hide').delay(1000);
+  var dLay = function() {
+    for (var i = 0; i < 4; i++) {$("li").eq(i).removeClass('hide').delay(1000);
+    }
+  }
+setInterval(dLay, 1000)
+
+for (var i = 0; i < 4; i++) {
+  setTimeout $("li").eq(i).removeClass('hide').delay(1000);
+
+
+
+
+
     // Your scripts here.
   </script>
 </body>

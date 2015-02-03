@@ -8,3 +8,5 @@ VALUES
   ('Hufflepuff'),
   ('Ravenclaw'),
   ('Slytherin');
+
+-- UPDATE students SET lname = 'De La Couer' WHERE house_id = 5
