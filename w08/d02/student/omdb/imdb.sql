@@ -45,3 +45,9 @@ INSERT INTO actors_movies (actor_id, movie_id) VALUES (5, 3);
 INSERT INTO actors_movies (actor_id, movie_id) VALUES (3, 4);
 INSERT INTO actors_movies (actor_id, movie_id) VALUES (4, 4);
 INSERT INTO actors_movies (actor_id, movie_id) VALUES (6, 4);
+
+SELECT actors.name
+-- FROM death_eater_memberships
+-- INNER JOIN students
+-- ON death_eater_memberships.student_id = students.id
+-- WHERE house_id != 4;

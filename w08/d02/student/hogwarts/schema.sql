@@ -31,5 +31,10 @@ CREATE TABLE death_eater_memberships (
 -- ON death_eater_memberships.student_id = students.id
 -- WHERE house_id != 4;
 
+-- SELECT is what you want returned
+--select actors.name, movies.*
+
+
+
 
 

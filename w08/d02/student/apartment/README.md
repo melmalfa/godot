@@ -27,10 +27,16 @@ Given the entities **Buildings**, **Apartments**, **Tenants**, and **Doormen**,
 draw an ERD. What relationships exist between these tables? Which tables should
 have a foreign key?
 
+A building can have many apartments
 - A **building** has a ...
   - name,
   - address,
   - and, a number of floors.
+
+apartments belong to buildings
+apartments can only have 1 building
+1:1 each apartment has many tenants - apartments have tenants
+this will have a foreign key for building
 - An **apartment** has a ...
   - floor,
   - name,
@@ -38,10 +44,19 @@ have a foreign key?
   - square footage,
   - number of bedrooms,
   - and a number of bathrooms.
-- A **tenant** has a ...
+-
+tenants live in apartments
+tenants have only one apartment (not unique)
+this will have a foreign key for apartment
+ A **tenant** has a ...
   - name,
   - age,
   - and a gender ('Male' or 'Female').
+
+doormen work in buildings
+a building has many doormen
+a doorman has only one building
+has a foreign key for building
 - A **doorman** has a ...
   - a name,
   - experience (in number of shifts worked),
