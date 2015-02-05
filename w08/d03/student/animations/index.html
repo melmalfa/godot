@@ -5,9 +5,10 @@
   <title>Animations</title>
 
   <link rel="stylesheet" type="text/css" href="stylesheets/animate.css">
-
+  <link rel="stylesheet" type="text/css" href="stylesheets/cards.css">
   <link rel='stylesheet' type='text/css' href='stylesheets/normalize.css'>
   <link rel="stylesheet" type="text/css" href="stylesheets/main.css">
+
   <style>
     /* Your style here. */
     #title {
@@ -21,7 +22,25 @@
       -moz-animation-duration:    0.5s;
       -o-animation-duration:      0.5s;
       animation-duration:         0.5s;
-    } /* use multiple selectors to increase the specificity! */
+    } /* use multiple selectors to increase the
+    specificity! */
+
+    .card {
+      position: absolute;
+      margin-left: -32px;
+    }
+
+    .deck {
+      top: 216px;
+      left: 50%;
+    }
+
+    .west { left: 20%; }
+    .north {left: 40%; }
+    .south { left: 80%; }
+    .east { left: 60%; }
+
+
   </style>
 
   <script type="text/javascript" src="scripts/jquery.js"></script>
@@ -39,13 +58,23 @@
         </ul>
       </nav>
       <section class="table">
+        <div class="card outline west">West</div>
+        <div class="card outline north">North</div>
+        <div class="card outline east">East</div>
+        <div class="card outline south">South</div>
+        <div id="deck" class="card deck">Deck</div>
       </section>
     </div>
   </div>
   <script>
     // Your scripts here.
 
-    // vendor prefix animationend events from https://github.com/daneden/animate.css#usage
+    // var shufflePop = function() {
+
+
+    // }
+    // this covers all the prefixes to use in all browsers! then we can use our variable all the time without writing all the prefixes
+    //vendor prefix animationend events from https://github.com/daneden/animate.css#usage
     var animationEnd = "webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend";
 
     // HAND-ROLLING IT ISN'T THAT HARD!
@@ -68,9 +97,19 @@
       return true;
     }
 
+
+
     window.addEventListener("load", function(e) {
       var $title = $("#title"),
           $lis   = $("nav li");
+
+        $(".card").addClass("animated fadeIn hide");
+
+        $lis.eq(3).on(animationEnd, function(e) {
+          $(".card").removeClass("hide");
+        })
+
+        $("#deck").addClass("pulse");
 
       // now we're talking!
       $title.on(animationEnd, function(e) {

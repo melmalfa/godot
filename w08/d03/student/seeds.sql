@@ -1,4 +1,5 @@
 DROP TABLE IF EXISTS receipts;
+DROP TABLE IF EXISTS stores;
 
 CREATE TABLE receipts (
   id serial PRIMARY KEY,
@@ -8,6 +9,28 @@ CREATE TABLE receipts (
   price money NOT NULL,
   buy_date date DEFAULT current_date
 );
+
+CREATE TABLE stores (
+  id serial PRIMARY KEY,
+  name varchar(50) NOT NULL,
+  slogan varchar(100) NOT NULL
+);
+
+INSERT INTO stores (name, slogan) VALUES
+  ('Sears', 'The Catalog People'),
+  ('Toys R Us', 'Where A Kid Can Be A Capitalist'),
+  ('Strand', 'Holding Out Despite B&N'),
+  ('Community Books', 'Bound Paper For All' ),
+  ('Macy''s', 'We Do Parades' ),
+  ('Schnapps Haus', 'We''re The Schnappiest Around!');
+
+ALTER TABLE receipts ADD COLUMN store_id integer REFERENCES stores(id);
+
+SELECT receipts.*, stores.*
+FROM receipts
+INNER JOIN stores
+ON receipts.store_id = stores.id;
+
 
 INSERT INTO receipts (store, item, number_of_items, price, buy_date) VALUES
   ('Sears', 'PS4', 1, 400, 'January 21 2014'),
