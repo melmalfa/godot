@@ -25,6 +25,8 @@ CREATE TABLE spells_students (
   spell_id integer REFERENCES spells(id),
   student_id integer REFERENCES students(id)
 );
+# a spell has many spells and students have many spells - many to many- so we need a join table - the relationship is based on the ids
+# this si a hidden table behind the sceenes. it represents an idea about the relationship.
 
 create table death_eater_memberships (
   id serial PRIMARY KEY,
