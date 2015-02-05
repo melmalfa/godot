@@ -29,6 +29,7 @@
       animation-duration:         0.5s;
     } /* use multiple selectors to increase the specificity! */
 
+
   .card {
       position: absolute;
       margin-left: -32px;
@@ -46,6 +47,7 @@
   </style>
 
   <script type="text/javascript" src="scripts/jquery.js"></script>
+    <script type="text/javascript" src="scripts/lodash.js"></script>
 </head>
 <body>
   <div class="wrapper">
@@ -73,7 +75,19 @@
     var $title,
         $lis,
         $deck,
-        $cards;
+        $cards,
+        $table,
+        cards,
+        currentDeck,
+        currentCard,
+        deckIsShuffled = false;
+
+  var cards = [
+  "dA","dK","dQ","dJ","d10","d09","d08","d07","d06","d05","d04","d03","d02",
+  "cA","dK","dQ","dJ","d10","d09","d08","d07","d06","d05","d04","d03","d02",
+  "hA","dK","dQ","dJ","d10","d09","d08","d07","d06","d05","d04","d03","d02",
+  "sA","dK","dQ","dJ","d10","d09","d08","d07","d06","d05","d04","d03","d02",
+  ];
 
     var animationEnd = "webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend";
     var unhideNextOnEnd = function($currentEl, $nextEl) {
@@ -95,11 +109,13 @@
       return true;
     }
 
+
     window.addEventListener("load", function(e) {
       $title = $("#title");
       $lis   = $("nav li");
       $deck  = $("#deck");
       $cards = $(".card");
+
 
       $cards.addClass("animated fadeIn hide");
 
@@ -113,7 +129,32 @@
           $deck.removeClass("fadeIn").addClass("pulse");
         }, 800);
       });
-    });
+
+//anything defined in here only exist in the loading moment
+      $deck.on("click", function(e) {
+        // currentDeck = _shuffle(cards)- this returns a new array
+        if (deckIsShuffled) {
+          currentCard = currentDeck.pop();
+          $currentCardEl = $('<div class="card '+currentCard+'">'+currentCard+'</div>');
+          $currentCardEl.css({top: "216px", left: "50%"})
+          $currentCardEl.addClass("animated flipInY")
+          $(".table").append($currentCardEl);
+        } else {
+          $deck.addClass("shake").removeClass("pulse");
+          currentDeck = _.shuffle(cards);
+          deckIsShuffled = true;
+        }
+        }); //  deck.click
+
+      //alternative way of doing this: .one means we only do it one time
+        // $deck.one("click", function(e) {
+        //   currentDeck = _.shuffle(cards);
+        //   $deck.on("click", function(e) {
+        //     currentCard = currentDeck.pop();
+        //   });
+        // };
+
+    }); //window.load
   </script>
 </body>
 </html>
