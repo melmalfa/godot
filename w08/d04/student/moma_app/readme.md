@@ -1,10 +1,12 @@
 # MOMA App
 
-This app will have 2 models: `Artists` and `Paintings`. 
+//tables
+This app will have 2 models: `Artists` and `Paintings`.
 
 An Artist __has many__ paintings.
 A Painting __belongs to an__ Artist.
 
+//column names
 An Artist has
 * name
 * nationality
@@ -15,7 +17,7 @@ A Painting has
 ###Part 1 - Database Schemas
 
 1. Create a new database called `moma_db`.
-2. Create the database tables to model Artists, Paintings, and their relationships. 
+2. Create the database tables to model Artists, Paintings, and their relationships.
 3. Save this to a file called `moma.sql`
 
 ###Part 2 - Setting up ActiveRecord
@@ -36,7 +38,7 @@ Artists
 Paintings
 - Starry Night, by Van Gogh
 - Cafe Terrace at Night
-- Guernica, by Picaso 
+- Guernica, by Picaso
 - The Old Guitarist, by Picasso
 - The Great Wave off Kanagawa, by Hokusai
 - Red Fuji, by Hokusai
