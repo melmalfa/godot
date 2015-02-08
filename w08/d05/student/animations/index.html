@@ -7,6 +7,7 @@
   <link rel="stylesheet" type="text/css" href="stylesheets/animate.css">
   <link rel="stylesheet" type="text/css" href="stylesheets/cards.css">
   <link rel='stylesheet' type='text/css' href='stylesheets/normalize.css'>
+    <link rel='stylesheet' type='text/css' href='stylesheets/jquery-ui.css'>
   <link rel="stylesheet" type="text/css" href="stylesheets/main.css">
   <style>
     /* Your style here. */
@@ -115,8 +116,15 @@
       return $('<div class="card '+card+'">'+card+'</div>')
         .css({top: "216px", left: "50%"})
         .addClass("animated flipInY")
+        // .one("click", function(e){
+        //   $(event.target).css({top: "40px", left: "20%"})
+        // })
         .appendTo($table);
     }
+
+    .north { left: 40%; }
+    .east  { left: 60%; }
+    .south { left: 80%; }
 
     window.addEventListener("load", function(e) {
       $title = $("#title");

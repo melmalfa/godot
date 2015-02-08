@@ -1,10 +1,15 @@
 require 'active_record'
 
+require_relative '../models/genre'
+require_relative '../models/movie'
+require_relative '../models/purchase'
+require_relative '../models/user'
+
 ActiveRecord::Base.establish_connection(
   adapter:  'postgresql',
   host:     'localhost',
-  username: 'YOUR_USERNAME',
-  database: 'YOUR_DB'
+  username: 'melodiemalfa',
+  database: 'popcorn_db'
 )
 
 # Logging
