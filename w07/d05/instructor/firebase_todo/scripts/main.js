@@ -86,7 +86,7 @@ var createTaskEl = function(taskID, description, complete) {
 }
 
 var addTaskEl = function(taskID, description, complete) {
-  var $taskList = $('.task-list');
+  var $task3skList = $('.task-list');
   var taskEl    = createTaskEl(taskID, description, complete);
   $taskList.append(taskEl);
   return taskEl;

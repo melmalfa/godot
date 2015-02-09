@@ -20,6 +20,7 @@ class Movie < ActiveRecord::Base
     hours + " Hours and " + minutes + " Minutes."
   end
 
+# i need to fix these
   def rented_by?(user)
     ownrent = Purchase.joins(:movie_id)
     user = ownrent.user_id
@@ -27,6 +28,9 @@ class Movie < ActiveRecord::Base
   end
 
   def owned_by?(user)
+    ownrent = Purchase.joins(:movie_id)
+    user = ownrent.user_id
+    ownrent.own_or_rent
   end
 
 end
