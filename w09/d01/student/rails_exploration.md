@@ -38,39 +38,46 @@ Now visit "http://localhost:3000/fruits"
 
 Run the command `rails` from outside of a Rails app and from within one.
 Does the output change?
-
-- What version of Rails are you running?
+- What version of Rails are you running? 2.1.2
 - What's the command to create a new Rails application?
-- What is Rails default Database?
+rails new my_app
+- What is Rails default Database? sqlite3
 - How does one configure Rails presets?
 - How does one create a new Rails Application with a postgresql database?
+rails new_app -d postgresql
 
-## Do the following
-
+## Do the follow
 Inside of `dev/wdi`
 
 Create a new Rails application called `sample_app` without Active Record
+-rails new sample_app -O
+(skips active record files)
 
-Create another new Rails application called `welcome_app` with 
+Create another new Rails application called `welcome_app` with
 
-- a postgres database inside of `dev/wdi` 
+- a postgres database inside of `dev/wdi`
 - no Javascript
+
+rails new welcome_app -J -D postgresql
 
 Create another new Rails application called `popcorn_app` with
 
 - a postgres database
 - no turbolinks
-- no test unit 
+- no test unit
+
+rails new pocorn_app -D postgresql --skip-turbolinks --skip-test-unit
+
 
 `cd` into `sample_app` and run `rails -h`
 
-What is the command to start the server?
+What is the command to start the server? server
 
-What port does the server listen on?
+What port does the server listen on? localhost 3000
 
-What's the command to run the server in a different environment?
+What's the command to run the server in a different environment? runner
 
-What command starts a Rails console?
+What command starts a Rails console? console
 
 `rake` is a Ruby program built to run tasks.
 
