@@ -1,0 +1,12 @@
+<h1>Caught Pokemon:</h1>
+
+<ul>
+  <% @pokemon.each do |pokemon| %>
+<li><a href="/pokemon/<%= pokemon.name %>"><%= pokemon.name %></a></li>
+  <% end %>
+</ul>
+
+<p><a href="/explore">Explore the Universe</a></p>
+
+
+

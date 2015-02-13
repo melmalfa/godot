@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
+ root 'pokemon#index'
+ get '/pokemon' => 'pokemon#index'
+ get '/pokemon/explore' => 'pokemon#explore'
+ get '/pokemon/random_poke_clash' => 'pokemon#random'
+
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
