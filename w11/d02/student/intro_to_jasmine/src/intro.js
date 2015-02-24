@@ -6,6 +6,7 @@ var sleepIn = function(dayName) {
   }
 }
 
+<<<<<<< HEAD
 
 var pluralize = function(list) {
   var last = list.pop();
@@ -34,4 +35,8 @@ var prettyTime = function(y) {
   else {
      return div+" minutes and "+rem+" seconds";
   }
+=======
+var pluralize = function(list) {
+  return "lions, tigers and bears";
+>>>>>>> eff856f00de42994e829006cc3be65a46ebc90a3
 }

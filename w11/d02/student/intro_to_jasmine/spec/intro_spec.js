@@ -34,8 +34,12 @@ describe('pluralize', function(){
   it("works on any array of strings", function(){
     var snacks = ['doritos', 'apples', 'candy', 'cheetos'];
     expect( pluralize(snacks) ).toEqual( "doritos, apples, candy and cheetos");
+<<<<<<< HEAD
   } );
+=======
+>>>>>>> eff856f00de42994e829006cc3be65a46ebc90a3
 
+  });
 });
 
 describe('prettyTime', function(){
