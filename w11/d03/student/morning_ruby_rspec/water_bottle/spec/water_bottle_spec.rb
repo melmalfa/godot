@@ -7,7 +7,7 @@ describe "WaterBottle" do
     it "sets capacity and brand" do
       wb = WaterBottle.new("Mudd", 16)
       expect( wb.capacity ).to eq 16
-      expect( wb.brand ).to eq "Mud"
+      expect( wb.brand ).to eq "Mudd"
     end
 
     it "is empty" do
@@ -17,15 +17,16 @@ describe "WaterBottle" do
 
   end
 
-  xdescribe "#fill" do
+  describe "#fill" do
 
     it "can be filled" do
       wb = WaterBottle.new("Haterade", 16)
+      wb.fill
       expect(wb).not_to be_empty
     end
   end
 
-  xdescribe "#measure" do
+  describe "#measure" do
 
     it "returns the amount left in a bottle" do
       wb1 = WaterBottle.new("Chardonnade", 16)
