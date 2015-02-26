@@ -1,0 +1,14 @@
+<h1><%= @book.title %></h1>
+<p><%= link_to @book.author.name, author_path(@book.author) %></p>
+<p>Released On: <%= @book.released_on %></p>
+<p>Genre: <%= @book.genre %></p>
+<h2>Books</h2>
+<ul>
+    <% @book.characters.each do |character| %>
+  <li>
+    <%= link_to character.name, character_path(character) %></li>
+    <% end %>
+</ul>
+
+
+ <%= link_to student.name, student_path(student) %>

@@ -1,11 +1,8 @@
-<h1>Welcome to Hogwarts!<h2
-<%= link_to 'View the Houses', '/houses' %>
-<%= link_to 'View the Students', '/students' %>
+<h1>Welcome to Hogwarts!</h2>
+<%= link_to 'View the Houses', houses_path %>
+<%= link_to 'View the Students', students_path %>
 
-<!-- bonus
-<h1>Entroll a Student</h1
-<%# form_for(@student) do |f| %>
-  <%#= f.text_field :name %>
-  <%#= f.submit 'Enroll' %>
-<%# end %>
--->
+
+<h1><%= link_to 'Enroll a Student', new_student_path %></h1>
+
+
